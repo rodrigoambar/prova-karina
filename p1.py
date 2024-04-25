@@ -7,7 +7,10 @@ class Professor(Pessoa):
     def __init__(self, nome, titulacao):
         super().__init__(nome)
         self.titulacao = titulacao
-
+    def mostrar_nome(self):
+        print(f'O nome do professor {self.nome} e seu titulo e {self.titulacao}')
+b = Professor('Joao', 'Mestre')
+b.mostrar_nome()
 #2
 class Tamagushi:
     def __init__(self, nome):
@@ -125,7 +128,7 @@ class Calculadora:
             print(a / b)
         else:
             print("não da para dividir por 0")
-
+#5
 class calculadora_cientifica(Calculadora):
     def raiz_quadrada(self):
         a = int(input("coloque o primeiro número: "))
