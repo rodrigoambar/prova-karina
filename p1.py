@@ -43,16 +43,16 @@ class Tamagushi:
     def retorna_idade(self):
         print(f'a idade do nosso tamaguchi é :{self.idade}')
 
-a = Tamagushi('Cris')
-a.alterar_fome()
-a.alterar_nome()
-a.alterar_saude()
-a.alterar_idade()
-a.set_humor()
-a.retorna_fome()
-a.retorna_idade()
-a.retorna_nome()
-a.retorna_saude()
+# a = Tamagushi('Cris')
+# a.alterar_fome()
+# a.alterar_nome()
+# a.alterar_saude()
+# a.alterar_idade()
+# a.set_humor()
+# a.retorna_fome()
+# a.retorna_idade()
+# a.retorna_nome()
+# a.retorna_saude()
 
 #3
 class Televisao:
@@ -92,5 +92,46 @@ class controle(Televisao):
         if self.canal > 1:
             self.canal -= 1
     
+a = Televisao()
+b = controle()
+b.aumentar_canal()
+b.aumentar_canal()
+b.aumentar_volume()
 
+b.consultar_volume()
+b.consultar_canal()
 
+#4
+class Calculadora:
+
+    def soma(self):
+        a = int(input("coloque o primeiro número: "))
+        b = int(input("coloque o segundo número: "))
+        print(a + b)
+    def subratacao(self):
+        a = int(input("coloque o primeiro número: "))
+        b = int(input("coloque o segundo número: "))
+        print(a - b)
+
+    def multiplicacao(self):
+        a = int(input("coloque o primeiro número: "))
+        b = int(input("coloque o segundo número: "))
+        print(a * b)
+    
+    def divisao(self):
+        a = int(input("coloque o primeiro número: "))
+        b = int(input("coloque o segundo número: "))
+        if b != 0:
+            print(a / b)
+        else:
+            print("não da para dividir por 0")
+
+class calculadora_cientifica(Calculadora):
+    def raiz_quadrada(self):
+        a = int(input("coloque o primeiro número: "))
+        print(a ** 0.5)
+    def potencia(self):
+        a = int(input("coloque o primeiro número: "))
+        expoente = int(input("coloque o expoente: "))
+        print( a ** expoente)
+        
