@@ -85,9 +85,12 @@ class controle(Televisao):
         if self.volume >= 0:
             self.volume -= 1
 
-    def trocar_canal(self, novo_canal):
+    def trocar_canal(self):
         novo_canal = int(input("coloque o canal específico: "))
-        self.canal = novo_canal
+        if novo_canal > 1 and novo_canal < 160:
+            self.canal = novo_canal
+        else:
+            print("Impossivel ir para um canal fora do alcance")
     def aumentar_canal(self):
         if self.canal < 160:
             self.canal += 1
@@ -100,7 +103,7 @@ b = controle()
 b.aumentar_canal()
 b.aumentar_canal()
 b.aumentar_volume()
-
+b.trocar_canal()
 b.consultar_volume()
 b.consultar_canal()
 
