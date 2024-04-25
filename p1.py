@@ -53,3 +53,44 @@ a.retorna_fome()
 a.retorna_idade()
 a.retorna_nome()
 a.retorna_saude()
+
+#3
+class Televisao:
+    def __init__(self):
+        self.volume = 0
+        self.canal = 1
+    def consultar_volume(self):
+        print(f'o volume atual é: {self.volume}')
+    
+    def consultar_canal(self):
+        print(f'o canal atual é {self.canal}')
+
+    def trocar_canal(self, novo_canal):
+        novo_canal = int(input("coloque o canal específico: "))
+        self.canal = novo_canal
+
+class controle(Televisao):
+    def __init__(self):
+        super().__init__()        
+    
+    def aumentar_volume(self):
+        if self.volume < 100:
+            self.volume += 1
+
+
+    def diminuir_volume(self):
+        if self.volume >= 0:
+            self.volume -= 1
+
+    def trocar_canal(self, novo_canal):
+        novo_canal = int(input("coloque o canal específico: "))
+        self.canal = novo_canal
+    def aumentar_canal(self):
+        if self.canal < 160:
+            self.canal += 1
+    def diminuir_canal(self):
+        if self.canal > 1:
+            self.canal -= 1
+    
+
+
