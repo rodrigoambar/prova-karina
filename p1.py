@@ -138,3 +138,6 @@ class calculadora_cientifica(Calculadora):
         expoente = int(input("coloque o expoente: "))
         print( a ** expoente)
         
+c = calculadora_cientifica()
+c.potencia()
+c.raiz_quadrada()
